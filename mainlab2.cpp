@@ -2,21 +2,21 @@
 int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	Publisher publ("Пётр", "Петров", "Петрович", 24);
+	Publisher publ("ГЏВёГІГ°", "ГЏГҐГІГ°Г®Гў", "ГЏГҐГІГ°Г®ГўГЁГ·", 24);
 	Transaction<Author> author;
-	SmartPointer<Book> book1 = new Book("рецепты мира","кулинария","первый рецепт яичницы");
-	author->set_emp("Иван", "Иванов", "Иванович", 23);
+	SmartPointer<Book> book1 = new Book("Г°ГҐГ¶ГҐГЇГІГ» Г¬ГЁГ°Г ","ГЄГіГ«ГЁГ­Г Г°ГЁГї","ГЇГҐГ°ГўГ»Г© Г°ГҐГ¶ГҐГЇГІ ГїГЁГ·Г­ГЁГ¶Г»");
+	author->set_emp("Г€ГўГ Г­", "Г€ГўГ Г­Г®Гў", "Г€ГўГ Г­Г®ГўГЁГ·", 23);
 	author->set_book(book1);
 	author->set_books(book1);
 	author->set_cont(author->Get_book()->Get_content());
 	publ.publicate(book1);
-	author.showState(State::begin);//не обязательно
-	author.beginTransactions("НЕТ РЕЦЕПТАМ");
+	author.showState(State::begin);//Г­ГҐ Г®ГЎГїГ§Г ГІГҐГ«ГјГ­Г®
+	author.beginTransactions("ГЌГ…Г’ ГђГ…Г–Г…ГЏГ’ГЂГЊ");
 	author.showState(State::middle);
 	author.deleteTransactions();
 	author.commit();
 	author.showState(State::begin);
-	author.beginTransactions("Рецептам быть");
+	author.beginTransactions("ГђГҐГ¶ГҐГЇГІГ Г¬ ГЎГ»ГІГј");
 	author.showState(State::middle);
 	author.commit();
 	author->Get_book().~SmartPointer();
