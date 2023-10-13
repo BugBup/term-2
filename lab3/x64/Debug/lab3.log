@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\VS C++\term 2\lab3\header.h(34,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\VS C++\term 2\lab3\header.h(35,30): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  lab3.vcxproj -> D:\VS C++\term 2\x64\Debug\lab3.exe

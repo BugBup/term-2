@@ -1,0 +1,51 @@
+#include "header.h"
+void menu() {
+	cout <<
+		"1 - Купить один цветок" << endl <<
+		"2 - Купить букет из разных цветов" << endl <<
+		"3 - Создать бесконечное число букетов где в каждом будет 1001 роза " << endl <<
+		"4 - Показать исключение в конструкторе"<<endl<<
+		"5 - Выход" << endl;
+}
+Bouquet::Bouquet(const Bouquet& obj) {
+	if (obj.amount > 0) {
+		//delete[] this->flower;
+		this->flower = new  Flowers[obj.amount];
+		for (int i = 0; i < obj.amount; i++)
+			*(this->flower + i) = *(obj.flower + i);
+	}
+	this->amount = obj.amount;
+}
+/*Bouquet::~Bouquet() {
+	if (amount > 0) {
+		delete[] flower;
+		amount = 0;
+	}
+}*/
+void Bouquet::add_flower(Flowers flower) {
+	if (this->amount != 0) {
+		Bouquet temp;
+		temp.flower = new Flowers[this->amount];
+		for (int i = 0; i < this->amount; i++) 
+			*(temp.flower + i) = *(this->flower + i);
+
+		delete[] this->flower;
+		this->flower = new Flowers[this->amount + 1];
+
+		for (int i = 0; i < this->amount; i++)
+			*(this->flower + i) = *(temp.flower + i);
+		delete[] temp.flower;
+		*(this->flower + this->amount) = flower;
+	}
+	else {
+		this->flower = new Flowers[1];
+		*(this->flower + 0) = flower;
+	}
+	this->amount += 1;
+	
+}
+void termFunc() {
+	cout << "Функция termFunc() вызвана функцией terminate().\n";
+	// операторы освобождения ресурсов
+	exit(-1);
+}
