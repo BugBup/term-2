@@ -1,0 +1,9 @@
+﻿  functions.cpp
+D:\VS C++\term 2\IO stream\header.h(29,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\VS C++\term 2\IO stream\header.h(30,30): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  main.cpp
+D:\VS C++\term 2\IO stream\header.h(29,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\VS C++\term 2\IO stream\header.h(30,30): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+D:\VS C++\term 2\IO stream\main.cpp(124,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  IO stream.vcxproj -> D:\VS C++\term 2\x64\Debug\IO stream.exe
