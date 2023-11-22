@@ -1,0 +1,6 @@
+﻿  ClassDef.cpp
+  ClassName.h
+  main.cpp
+D:\VS C++\term 2\STL sequence containers\main.cpp(63,6): warning C4834: discarding return value of function with [[nodiscard]] attribute
+  Generating Code...
+  STL sequence containers.vcxproj -> D:\VS C++\term 2\x64\Debug\STL sequence containers.exe
